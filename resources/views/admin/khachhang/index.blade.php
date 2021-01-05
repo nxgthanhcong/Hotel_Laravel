@@ -1,7 +1,6 @@
 @extends('admin.theme.layout')
 @section('content')
-<a href="{{ url(Request::route()->getPrefix()) }}" class="btn btn-primary">Quản lý</a>
-<a href="{{route('khachhang.create')}}" class="btn btn-success">Thêm mới</a>
+<a href="{{route('khachhang.index')}}" class="btn btn-primary">Quản lý</a>
 <table class="table table-hover" style="margin-top:10px">
   <thead>
     <th>MaKH</th>
@@ -21,7 +20,7 @@
         <td>{{$kh->DiaChi}} </td>
         <td>{{$kh->Sdt}} </td>
         <td><a href="{{route('khachhang.edit', $kh->MaKH)}}" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-        <td><a href="" class="btn btn-warning"><i class="fa fa-lock"></i></a></td>
+        <td><a  href="" class="btn btn-warning lock"><i class="fa fa-lock"></i></a></td>
         <td>
         <form action="{{route('khachhang.destroy', $kh->MaKH)}}" method="POST">
         @csrf

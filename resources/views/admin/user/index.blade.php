@@ -21,7 +21,7 @@
             <td>{{$user->password}} </td>
             <td>{{$user->created_at}} </td>
             <td><a href="{{route('user.getedit',$user->id)}}" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-            <td><a href="" class="btn btn-warning"><i class="fa fa-lock"></i></a></td>
+            <td><a  href="" class="btn btn-warning lock"><i class="fa fa-lock"></i></a></td>
             <td><a href="{{route('user.delete',$user->id)}}" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
           </tr>
         @endforeach

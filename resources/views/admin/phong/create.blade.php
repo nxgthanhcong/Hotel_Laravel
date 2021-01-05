@@ -7,6 +7,19 @@
       <input type="text" class="form-control" name="TenPhong">
     </div>
     <div class="form-group">
+      <label for="TenPhong">So nguoi:</label>
+      <input type="number" class="form-control" name="Songuoi">
+    </div>
+    <div class="form-group">
+      <label for="MoTa">Mo ta:</label>
+      <textarea class="form-control" id="MoTa" name="Mota"></textarea>
+      <script>CKEDITOR.replace('MoTa');</script>
+    </div>
+    <div class="form-group">
+     <label for="Hinhanh">Image:</label>
+     <input type="file" class="form-control" name="image" />
+   </div>
+    <div class="form-group">
      <label for="LoaiPhong">Loại phòng:</label>
         <select name="LoaiPhong" class="form-control">
             <option value=''>---Vui lòng chọn loại phòng---</option>>

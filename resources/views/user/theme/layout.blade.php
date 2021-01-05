@@ -5,12 +5,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="_token" content="{{ csrf_token() }}">
 
     <title>Hotels a Hotels Category Responsive Web Template | Home : W3layouts</title>
 
     <link href="//fonts.googleapis.com/css?family=Spartan:400,500,600,700,900&display=swap" rel="stylesheet">
 
     <!-- Template CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{!! asset('user/css/style1.css') !!}">
   </head>
   <body>
@@ -50,7 +52,7 @@
 </section>
 
 <!-- Template JavaScript -->
-<script src="{!! asset('user/js/jquery-3.3.1.min.js') !!}"></script>
+<script src="{!! asset('user/js/jquery-3.3.1.min.js') !!}"></script> 
 
 <script src="{!! asset('user/js/owl.carousel.js') !!}"></script>
 <!-- script for banner slider-->
@@ -171,6 +173,7 @@ $(function () {
 <!-- disable body scroll which navbar is in active -->
 
 <script src="{!! asset('user/js/bootstrap.min.js') !!}"></script>
+<script src="{!! asset('user/js/notify.min.js') !!}"></script>
 
 </body>
 

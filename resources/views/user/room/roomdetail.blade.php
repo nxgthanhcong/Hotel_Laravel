@@ -7,23 +7,23 @@
         <div class="container">
             <div class="content-photo-1 d-grid">
                 <div class="content-photo-left text-center">
-                    <h4>Luxury Hotel</h4>
-                    <h6>Double Bed Rooom</h6>
+                    <h4>Congz Hotel</h4>
+                    <h6>{{$p->TenPhong}}</h6>
                     <div class="border-line">
                         <div class="bg">
-                            <span class="price">$ 240</span>
-                            <p> Per night</p>
+                            <span class="price">{{$p->GiaPhong}}</span>
+                            <p> Một đêm</p>
                         </div>
                         <div class="book-btn px-2">
-                            <a href="booking.html" class="btn btn-style btn-secondary mt-3">Book Now</a>
+                            <a href="{{route('thue.create')}}" class="btn btn-style btn-secondary mt-3">Đặt ngay</a>
                         </div>
                     </div>
                     <ul class="room-amenities">
-                        <li><a href="#url"><span class="fa fa-beer"></span> MiniBar</a></li>
-                        <li><a href="#url"><span class="fa fa-users"></span> 2 Guests</a></li>
-                        <li><a href="#url"><span class="fa fa-bed"></span> Double Bed</a></li>
+                        <li><a href="#url"><span class="fa fa-beer"></span> Quán bar mini</a></li>
+                        <li><a href="#url"><span class="fa fa-users"></span> {{$p->Songuoi}} người</a></li>
+                        <li><a href="#url"><span class="fa fa-bed"></span> Giường đôi</a></li>
                     </ul>
-                    <a href="room.html" class="back"> <span class="fa fa-long-arrow-left"></span> Back to all rooms</a>
+                    <a href="{{route('rooms')}}" class="back"> <span class="fa fa-long-arrow-left"></span> Trở về danh sách phòng</a>
                 </div>
                 <div class="content-photo-right">
                     <div class="csslider infinity" id="slider1">
@@ -33,16 +33,16 @@
                         <input type="radio" name="slides" id="slides_4" />
                         <ul class="banner_slide_bg">
                             <li>
-                                <img class="img" src="user/images/slide1.jpg" alt="">
+                                <img class="img" src="/larangu/public/images/{{$p->Hinhanh}}" alt="">
                             </li>
                             <li>
-                                <img class="img" src="user/images/slide4.jpg" alt="">
+                                <img class="img" src="/larangu/public/user/images/slide4.jpg" alt="">
                             </li>
                             <li>
-                                <img class="img" src="user/images/slide2.jpg" alt="">
+                                <img class="img" src="/larangu/public/user/images/slide2.jpg" alt="">
                             </li>
                             <li>
-                                <img class="img" src="user/images/slide3.jpg" alt="">
+                                <img class="img" src="/larangu/public/user/images/slide3.jpg" alt="">
                             </li>
                         </ul>
                         <div class="arrows">
@@ -70,16 +70,14 @@
 	<div class="container py-sm-4">
 		<div class="row">
 			<div class="col-lg-3 col-md-4 col-6">
-				<img src="user/images/room3.jpg" alt="" class="img-fluid">
+				<img src="/larangu/public/user/images/room3.jpg" alt="" class="img-fluid">
 			</div>
 			<div class="col-lg-3 col-md-4 col-6">
-				<img src="user/images/room4.jpg" alt="" class="img-fluid">
+				<img src="/larangu/public/user/images/room4.jpg" alt="" class="img-fluid">
 			</div>
 			<div class="col-lg-6 roomsingle mt-lg-0 mt-4">
-				<h3 class="title-small">The Room</h3>
-				<p class="roomsingle mt-3">Duis nisi sapien, elementum finibus fermentum eget, aliquet leo. Mauris hendrerit vel ex.
-				Quisque vitae luctus massa. Phasellus sed aliquam leo. Vestibulum ullamcorper a massa eu fringilla. Integer ultrices finibus sed nisi.
-				in convallis felis dapibus sit amet.</p>
+				<h3 class="title-small">{{$p->TenPhong}}</h3>
+				<p class="roomsingle mt-3">{{$p->TenPhong}} được thiết kế tinh tế sang trọng nội thất đầy đủ tiện nghi hiện đại, cửa sổ kính rộng thoáng bao quát toàn cảnh thành phố mang đến cho bạn một không gian thanh bình và dễ chịu sẽ là sự lựa chọn cho những doanh nhân và khách du lịch.</p>
 			</div>
 		</div>
 	</div>
@@ -88,23 +86,21 @@
 	<div class="container py-sm-4">
 		<div class="row">
 			<div class="col-lg-7 roomsingle">
-                <h3 class="title-small">Amenities provided by our hotel</h3>
+                <h3 class="title-small">Tiện nghi:</h3>
                 <ul class="w3l-right-book mt-4">
-                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Flat screen TV</a></li>
-                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Free high-speed WiFi</a></li>
-                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Private Bathroom</a></li>
-                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Free parking space</a></li>
-                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Early Check-in</a></li>
-                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Swimming pool</a></li>
-                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Air-conditioning</a></li>
-                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Welcome treatment</a></li>
-                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Barrier-free rain shower</a></li>
-                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Aesop bath amenities</a></li>
-                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Bike rental facility</a></li>
+                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Tivi màn hình phẳng</a></li>
+                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>WiFi tốc độ cao miễn phí</a></li>
+                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Phòng tắm riêng</a></li>
+                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Chỗ đậu xe miễn phí</a></li>
+             
+                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Hồ bơi cực rộng</a></li>
+                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Máy lạnh xịn</a></li>
+                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Đồ vệ sinh cá nhân</a></li>
+                    <li><a hef="#url"><span class="fa fa-check" aria-hidden="true"></span>Cho thuê xe đạp</a></li>
                 </ul>
 			</div>
 			<div class="col-lg-5 mt-lg-0 mt-4">
-				<img src="user/images/facilities.jpg" alt="" class="img-fluid">
+				<img src="/larangu/public/user/images/facilities.jpg" alt="" class="img-fluid">
 			</div>
 		</div>
 	</div>

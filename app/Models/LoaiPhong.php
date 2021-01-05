@@ -15,4 +15,7 @@ class LoaiPhong extends Model
         'TenLoai',
         'Mota'
     ];
+    public function phong(){
+        return $this->hasMany('App\Models\Phong','LoaiPhong');
+    }
 }

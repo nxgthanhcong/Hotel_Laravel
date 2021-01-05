@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title> Home :: Admin</title>
+    <title>Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Pooled Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -72,5 +72,10 @@
 <!-- morris JavaScript -->
 <script src="{!! asset('api/js/raphael-min.js') !!}"></script>
 <script src="{!! asset('api/js/morris.js') !!}"></script>
+<script>
+  $('.lock').on('click',function(){
+    alert("Chức năng chưa hoàn thành");
+  })
+</script>
 </body>
 </html>

@@ -19,6 +19,9 @@ class Phong extends Migration
             $table->string('TenPhong');
             $table->integer('LoaiPhong')->unsigned()->nullable();
             $table->string('GiaPhong');
+            $table->string('Mota');
+            $table->integer('Songuoi');
+            $table->string('Hinhanh');
             $table->timestamps();
             $table->foreign('LoaiPhong')->references('MaLoai')->on('LoaiPhong');
         });

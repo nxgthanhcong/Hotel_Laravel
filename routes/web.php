@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-Route::get('/', function() {return view('user.home');})->name('home');
+
 
 Route::group(['prefix' => '', 'namespace' => 'admin'], function() {	
 	Route::get('login','LoginController@getLogin')->name('getLogin');
@@ -11,14 +11,25 @@ Route::group(['prefix' => '', 'namespace' => 'admin'], function() {
 	Route::get('logout','LoginController@getLogout')->name('getLogout');
 });
 
+Route::get('/', function() {return view('user.home');})->name('home');
 Route::group(['middleware' => 'CheckAdminLogin','prefix' => ''], function() {
 	Route::get('admin', function() {return view('admin.home');})->name('welcome');
 });
 
-Route::group(['middleware' => 'CheckAdminLogin','prefix' => '','namespace' => 'admin'], function() {
-	Route::resource('dichvu',DichVuController::class);
+Route::get('thue/create','admin\ThueController@Create')->name('thue.create');
+Route::get('thue/index','admin\ThueController@Index')->name('thue.index');
+Route::post('thue/store','admin\ThueController@Store')->name('thue.store');
+Route::get('thue/search','admin\ThueController@Search')->name('thue.search');
+Route::put('thue/update/{id}','admin\ThueController@Update')->name('thue.update');
+Route::get('thue/edit/{id}','admin\ThueController@edit')->name('thue.edit');
+Route::delete('thue/delete/{id}','admin\ThueController@destroy')->name('thue.delete');
+
+Route::get('rooms', 'admin\PhongController@Index2')->name('rooms');
+Route::get('loc/{MaLoai}', 'admin\PhongController@loc')->name('loc');
+Route::get('room/{MaPhong}', 'admin\PhongController@RoomDetail')->name('room');
+
+Route::group(['prefix' => '','namespace' => 'admin'], function() {
 	Route::resource('khachhang',KhachHangController::class);
-	Route::resource('thue',ThueController::class);
 	Route::resource('phong',PhongController::class);
 	Route::resource('loaiphong',LoaiPhongController::class);
 });
@@ -34,14 +45,9 @@ Route::group(['middleware' => 'CheckAdminLogin','prefix' => 'user', 'namespace' 
 });
 
 Route::group(['prefix' => '', 'namespace' => 'admin'], function() {
-	//Route::get('/', function() {return view('FrontEnd.home.home');})->name('home');
 	Route::get('/about', function() {return view('user.about');})->name('about');
 	Route::get('/service', function() {return view('user.services.index');})->name('service');
-	Route::get('/room', function() {return view('user.room.roomdetail');})->name('room');
-	Route::get('/rooms', function() {return view('user.room.rooms');})->name('rooms');
 	Route::get('/contact', function() {return view('user.contact');})->name('contact');
-	Route::get('/book', function() {return view('user.book.create');})->name('book');
-	//Route::get('/about', 'admin\PhongController@listPhong');
 });
 
 

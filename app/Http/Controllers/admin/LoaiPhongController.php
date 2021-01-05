@@ -12,7 +12,7 @@ class LoaiPhongController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('CheckAdminLogin');
+        //$this->middleware('CheckAdminLogin');
         $this->viewprefix='admin.loaiphong.';
         $this->viewnamespace='loaiphong';
     }

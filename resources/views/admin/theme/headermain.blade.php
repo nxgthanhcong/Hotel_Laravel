@@ -5,7 +5,7 @@
             <li class="dropdown profile_details_drop">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                     <div class="profile_img">
-                        <span class="prfil-img"><img src="/cdth18a/public/api/images/in4.jpg" alt=""> </span>
+                        <span class="prfil-img"><img src="/larangu/public/user/images/admin.jpg" alt=""> </span>
                         <div class="user-name">
                             <p>Cong</p>
                             <span>Administrator</span>

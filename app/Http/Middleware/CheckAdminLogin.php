@@ -21,7 +21,7 @@ class CheckAdminLogin
         {
             $user = Auth::user();
             // nếu level =1 (admin), status = 1 (actived) thì cho qua.
-            if ($user->status == 1 && $user->level == 0)
+            if ($user->status == 1)
             {
                 return $next($request);
             }

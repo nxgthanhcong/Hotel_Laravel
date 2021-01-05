@@ -12,10 +12,11 @@ class Thue extends Model
     protected $primaryKey = 'MaThue';
     protected $fillable = [
         'MaThue',
-        'MaKH',
-        'MaPhong',
+        'MaKHf',
+        'MaPhongf',
         'NgayDen',
         'NgayDi',
         'ThanhTien'
     ];
+   
 }

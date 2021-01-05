@@ -13,14 +13,21 @@ class PhongController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('CheckAdminLogin');
+        //$this->middleware('CheckAdminLogin');
         $this->viewprefix='admin.phong.';
         $this->viewnamespace='phong';
     }
     public function index()
     {
         $ps = Phong::all();
+        
         return view($this->viewprefix.'index')->with('ps', $ps);
+    }
+    public function index2()
+    {
+        $lps = LoaiPhong::all();
+        $ps = Phong::all();
+        return view('user.room.rooms',compact('ps','lps'));
     }
     public function create()
     {
@@ -34,9 +41,14 @@ class PhongController extends Controller
             'TenPhong' => 'required',
             'LoaiPhong' => 'required',
             'GiaPhong' => 'required',
+            'Mota' => 'required',
+            'image' => 'required',
+            'Songuoi' => 'required',
         ]);
-        //$Category->image = Helper::imageUpload($request);
+        $p->Hinhanh = Helper::imageUpload($request);    
         $p->TenPhong = $request->TenPhong;
+        $p->Mota = $request->Mota;
+        $p->Songuoi = $request->Songuoi;
         $p->LoaiPhong = $request->LoaiPhong;
         $p->GiaPhong = $request->GiaPhong;
         if($p->save())
@@ -63,7 +75,13 @@ class PhongController extends Controller
             'LoaiPhong' => 'required',
             'GiaPhong' => 'required',
         ]);
+        if($request->hasFile('image')){
+            $p->Hinhanh = Helper::imageUpload($request);
+        }
         //$Category->image = Helper::imageUpload($request);
+        
+        $p->Mota = $request->Mota;
+        $p->Songuoi = $request->Songuoi;
         $p->TenPhong = $request->TenPhong;
         $p->LoaiPhong = $request->LoaiPhong;
         $p->GiaPhong = $request->GiaPhong;
@@ -82,9 +100,16 @@ class PhongController extends Controller
             Session::flash('message', 'Failure!');
         return redirect()->route('phong.index');
     }
-    public function listPhong()
-    {
-        $ps = Phong::all();
-        return view('user.room.rooms',compact('ps'));
+    
+    public function loc($id){
+        $ps = LoaiPhong::find($id)->phong;
+        $lps = LoaiPhong::all();
+        return view('user.room.rooms',compact('ps','lps'));
+    }
+
+    public function RoomDetail($MaPhong){
+        $p = Phong::find($MaPhong);
+        
+        return view('user.room.roomdetail',compact('p'));
     }
 }

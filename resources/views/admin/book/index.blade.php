@@ -1,29 +1,29 @@
 @extends('admin.theme.layout')
 @section('content')
-<a href="{{ url(Request::route()->getPrefix()) }}" class="btn btn-primary">Quản lý</a>
-<a href="{{route('dichvu.create')}}" class="btn btn-success">Thêm mới</a>
+<a href="{{route('thue.index')}}" class="btn btn-primary">Quản lý</a>
+
 <table class="table table-hover" style="margin-top:10px">
   <thead>
-    <th>MaDV</th>
-    <th>TenDV</th>
-    <th>MoTaDV</th>
-    <th>GiaDV</th>
+    <th>MaThue</th>
+    <th>MaKH</th>
+    <th>MaPhong</th>
+    <th>NgayDen</th>
     <th>Edit</th>
     <th>Lock</th>
     <th>Delete</th>
   </thead>
   <tbody>
-    @foreach($dvs ?? '' as $dv)
+    @foreach($thues ?? '' as $thue)
       <tr>
-        <!-- <td><img src="{{asset('images/'. $dv->image)}}" width="40" /></td> -->
-        <td>{{$dv->MaDV}} </td>
-        <td>{{$dv->TenDV}} </td>
-        <td>{{$dv->MoTaDV}} </td>
-        <td>{{$dv->GiaDV}} </td>
-        <td><a href="{{route('dichvu.edit', $dv->MaDV)}}" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
-        <td><a href="" class="btn btn-warning"><i class="fa fa-lock"></i></a></td>
+        
+        <td>{{$thue->MaThue}} </td>
+        <td>{{$thue->MaKHf}} </td>
+        <td>{{$thue->MaPhongf}} </td>
+        <td>{{$thue->NgayDen}} </td>
+        <td><a href="{{route('thue.edit',$thue->MaThue)}}" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
+        <td><a href="" class="btn btn-warning lock"><i class="fa fa-lock"></i></a></td>
         <td>
-        <form action="{{route('dichvu.destroy', $dv->MaDV)}}" method="POST">
+        <form action="{{route('thue.delete',$thue->MaThue)}}" method="POST">
         @csrf
         @method('DELETE')
         <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
@@ -31,7 +31,7 @@
        
         </form>
       </tr>
-      @endforeach
+    @endforeach
   </tbody>
 </table>
 @stop

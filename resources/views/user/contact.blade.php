@@ -4,7 +4,7 @@
 <section class="w3l-breadcrumb">
     <div class="breadcrum-bg py-sm-5 py-4">
         <div class="container py-lg-3">
-            <h2>Contact Us</h2>
+            <h2>Liên hệ</h2>
             <p><a href="index.html">Home</a> &nbsp; / &nbsp; Contact</p>
 
         </div>

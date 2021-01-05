@@ -3,7 +3,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
 		<div class="container">
 			<a class="navbar-brand" href="{{route('home')}}">
-				<img src="user/images/hotels.png" alt="Your logo" style="height:35px;" /> Hotels</a>
+				<img src="/larangu/public/user/images/hotels.png" alt="Your logo" style="height:35px;" /> Congz Hotel</a>
 			<!-- if logo is image enable this   
 						<a class="navbar-brand" href="#index.html">
 							<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
@@ -18,41 +18,26 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="{{route('home')}}">Home</a>
+						<a class="nav-link" href="{{route('home')}}">Trang chủ</a>
 					</li>
 					<li class="nav-item @@about__active">
-						<a class="nav-link" href="{{route('about')}}">About</a>
+						<a class="nav-link" href="{{route('about')}}">Về chúng tôi</a>
 					</li>
 					<li class="nav-item @@services__active">
-						<a class="nav-link" href="{{route('service')}}">Services</a>
+						<a class="nav-link" href="{{route('service')}}">Dịch vụ</a>
 					</li>
-					<li class="nav-item dropdown @@room__active">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Rooms <span class="fa fa-angle-down"></span>
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="{{route('room')}}">Rooms</a>
-							<a class="dropdown-item" href="{{route('rooms')}}">Room Single</a>
-						</div>
+					<li class="nav-item @@services__active">
+						<a class="nav-link" href="{{route('rooms')}}">Các phòng</a>
 					</li>
-					<li class="nav-item dropdown @@blog__active">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Blog <span class="fa fa-angle-down"></span>
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="">Blog</a>
-							<a class="dropdown-item" href="">Blog Single</a>
-						</div>
-					</li>
+					
 					<li class="nav-item @@contact__active">
-						<a class="nav-link" href="{{route('contact')}}">Contact</a>
+						<a class="nav-link" href="{{route('contact')}}">Liên hệ</a>
 					</li>
 				</ul>
-				<a href="{{route('book')}}" class="ml-3 book btn btn-secondary btn-style">Book Now</a>
+				<a href="{{route('thue.create')}}" class="ml-3 book btn btn-secondary btn-style">ĐẶT PHÒNG</a>
 
-						<div class="profile_details w3l">
+					<!-- <a class="nav-link" href="{{route('contact')}}">Tài khoản</a> -->
+						<!-- <div class="profile_details w3l">
 							<ul>
 								<li class="dropdown profile_details_drop">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -74,8 +59,7 @@
 									</ul>
 								</li>
 							</ul>
-						</div>
-
+						</div> -->
 			</div>
 		</div>
 	</nav>

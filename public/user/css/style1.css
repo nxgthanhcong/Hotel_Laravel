@@ -376,6 +376,8 @@ h6, .h6 {
     .display-4 {
       font-size: calc(1.475rem + 2.7vw) ; } }
 
+
+
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -7481,6 +7483,7 @@ a.text-dark:hover, a.text-dark:focus {
 .fa-arrow-circle-o-down:before {
   content: ""; }
 
+
 .fa-arrow-circle-o-up:before {
   content: ""; }
 
@@ -9688,7 +9691,7 @@ p.white {
   border-radius: 6px; }
 
 .transparent-btn {
-  background: rgba(255, 255, 255, 0.16); }
+  background: rgb(35 25 25 / 70%); }
 
 .transparent-btn:hover {
   background: rgba(255, 255, 255, 0.25);

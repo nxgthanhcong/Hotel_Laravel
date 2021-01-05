@@ -26,16 +26,9 @@ class LoginController extends Controller
             'status'    => 1,
             'level' => 0,
         ];
-        $login2 = [
-            'email' => $request->txtEmail,
-            'password' => $request->txtPassword,
-            'status'    => 1,
-            'level' => 1,
-        ];
+        
         if (Auth::attempt($login)) {
             return redirect('/admin')->with('name',Auth::User()->name);
-        } else if (Auth::attempt($login2)){
-            return redirect('/')->with('name',Auth::User()->name);
         } else {
             return redirect()->back()->with('status', 'Email hoặc Password không chính xác');
         }

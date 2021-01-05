@@ -13,7 +13,13 @@ class Phong extends Model
     protected $fillable = [
         'MaPhong',
         'TenPhong',
+        'Hinhanh',
+        'Mota',
+        'Songuoi',
         'LoaiPhong',
         'GiaPhong'
     ];
+    public function loaiphong(){
+        return $this->belongsTo('App\Models\LoaiPhong','LoaiPhong','MaLoai');
+    }
 }
